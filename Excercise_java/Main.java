@@ -1,10 +1,6 @@
 package Excercise_java;
 
-import java.lang.Math;  
-import Excercise_java.Artifacts.*;
-import Excercise_java.Masterpiece.*;
-import Excercise_java.Paintings.*;
-import Excercise_java.Sculptures.*;
+import java.lang.Math;
 
 enum Movement {
     IMPRESSIONISM,
@@ -32,8 +28,7 @@ enum Material {
 
 public class Main {
     public static void main(String[] args) {
-        int temp = args.length;    // arguments amount
-        if (temp != 3) {
+        if (args.length != 3) {
             System.out.println("Wrong given arguments");
             System.exit(0);
         }
@@ -55,8 +50,8 @@ public class Main {
             Material my_mat = rand_mat();
 
             // creating the object
-            int y = (int)(Math.random() * (2) + 0);     // Generates random integers 0 or 1 
-            if (y == 0) {
+            int temp = (int)(Math.random() * (2) + 0);     // Generates random integers 0 or 1 
+            if (temp == 0) {
                 int lenght = (int)(Math.random() * (100) + 40);    // in cm
                 int width = (int)(Math.random() * (60) + 30);      // in cm
                 my_array[i] = new Paintings(lenght, width, my_techn, my_mov, my_cond);
@@ -66,11 +61,8 @@ public class Main {
                 my_array[i] = new Sculptures(volume, my_mat, my_mov, my_cond);
             }
         }
-        // System.out.println("/////////////////////////////////");
-
         auction(my_array, movement, condition);
     }
-
 
     public static void auction(Artifacts[] array, Movement m, Condition c) {
         for (Artifacts artifact : array) {

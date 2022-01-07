@@ -21,4 +21,10 @@ public class Sculptures extends Masterpiece {
         }
         return false;
     }
+    boolean evaluate(Movement m) {
+        if ((super.movement == m) && (super.condition == Condition.EXCELLENT)) {
+            return true;
+        }
+        return false;
+    }
 }

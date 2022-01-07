@@ -16,4 +16,5 @@ abstract public class Masterpiece extends Artifacts {
         System.out.println("Movement: " + movement + "\n" + "Condition: " + condition);
     }
     abstract boolean evaluate(Movement m, Condition c);
+    abstract boolean evaluate(Movement m);
 }

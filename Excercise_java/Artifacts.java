@@ -24,4 +24,5 @@ abstract public class Artifacts {
         System.out.println("Index: " + index);
     }
     abstract boolean evaluate(Movement m, Condition c);
+    abstract boolean evaluate(Movement m);
 }
