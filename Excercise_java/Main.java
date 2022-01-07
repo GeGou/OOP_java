@@ -57,12 +57,12 @@ public class Main {
             // creating the object
             int y = (int)(Math.random() * (2) + 0);     // Generates random integers 0 or 1 
             if (y == 0) {
-                int lenght = (int)(Math.random() * (200) + 50);    // in cm
-                int width = (int)(Math.random() * (160) + 40);      // in cm
+                int lenght = (int)(Math.random() * (100) + 40);    // in cm
+                int width = (int)(Math.random() * (60) + 30);      // in cm
                 my_array[i] = new Paintings(lenght, width, my_techn, my_mov, my_cond);
             }
             else {
-                int volume = (int)(Math.random() * (800) + 200);     // in cm^3
+                int volume = (int)(Math.random() * (600) + 200);     // in cm^3
                 my_array[i] = new Sculptures(volume, my_mat, my_mov, my_cond);
             }
         }
@@ -76,12 +76,12 @@ public class Main {
         for (Artifacts artifact : array) {
             artifact.getIndex();
             artifact.getInfo();
-            // if (artifact.) {
-            //     System.out.println("Not acceptable artifact");
-            // }
-            // else {
-            //     System.out.println("Acceptable artifact");
-            // }
+            if (artifact.evaluate(m, c) == false) {
+                System.out.println("->Not acceptable artifact");
+            }
+            else {
+                System.out.println("->Acceptable artifact");
+            }
         }
     }
 

@@ -2,9 +2,9 @@ package Excercise_java;
 
 // Artifacts
 
-public class Artifacts {
-    static int next_num = 0;
-    int index = 0;
+abstract public class Artifacts {
+    static int next_num = 1;
+    int index = 1;
     String creator;
     int year;
     Artifacts() {
@@ -13,7 +13,7 @@ public class Artifacts {
         index = next_num;
         next_num++;
         String temp_str = Integer.toString(index);
-        creator = "Creator" + temp_str;
+        creator = "Creator_" + temp_str;
         year = (int)(Math.random() * (100) + 1900);
     }
     void getInfo() {
@@ -23,4 +23,5 @@ public class Artifacts {
         System.out.println("\n-----ARTIFACT DATA-----");
         System.out.println("Index: " + index);
     }
+    abstract boolean evaluate(Movement m, Condition c);
 }

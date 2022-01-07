@@ -3,7 +3,7 @@ package Excercise_java;
 // Sculptures
 
 public class Sculptures extends Masterpiece {
-    int volume;
+    double volume;
     Material material;
     Sculptures(int vol, Material mat, Movement m, Condition c) {
         super(m, c);
@@ -13,7 +13,7 @@ public class Sculptures extends Masterpiece {
     }
     void getInfo() {
         super.getInfo();
-        System.out.println("Volume: " + volume + "\n" + "Material: " + material);
+        System.out.println("Material: " + material + "\n" + "Volume: " + volume + " cm^3");
     }
     boolean evaluate(Movement m, Condition c) {
         if ((super.movement == m) && (super.condition == c)) {

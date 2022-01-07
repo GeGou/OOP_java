@@ -3,8 +3,8 @@ package Excercise_java;
 //Paintings
 
 public class Paintings extends Masterpiece {
-    int length;
-    int width;
+    double length;
+    double width;
     Technique technique;
     Paintings(int l, int w, Technique t, Movement m, Condition c) {
         super(m, c);
@@ -15,7 +15,7 @@ public class Paintings extends Masterpiece {
     }
     void getInfo() {
         super.getInfo();
-        System.out.println("Technique: " + technique + "\n" + "Surface: " + length*width);
+        System.out.println("Technique: " + technique + "\n" + "Surface: " + (length*width)/10000 + " m^2");
     }
     boolean evaluate(Movement m, Condition c) {
         if ((super.movement == m) && (super.condition == c)) {
@@ -23,6 +23,11 @@ public class Paintings extends Masterpiece {
         }
         return false;
     }
-
+    boolean evaluate(Movement m) {
+        if (super.movement == m) {
+            return true;
+        }
+        return false;
+    }
     
 }
