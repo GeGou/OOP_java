@@ -80,7 +80,6 @@ public class Main {
     // returning random movement
     public static Movement rand_mov() {
         int temp = (int)(Math.random() * (3) + 0);
-        // System.out.println("Random move: " + temp);
         if (temp == 0) {
             return Movement.EXPRESSIONISM;
         }
@@ -95,7 +94,6 @@ public class Main {
     // returning random condiiton
     public static Condition rand_cond() {
         int temp = (int)(Math.random() * (3) + 0);
-        // System.out.println("Random cond: " + temp);
         if (temp == 0) {
             return Condition.BAD;
         }
@@ -110,7 +108,6 @@ public class Main {
     // returning random technique
     public static Technique rand_techn() {
         int temp = (int)(Math.random() * (3) + 0);
-        // System.out.println("Random techn: " + temp);
         if (temp == 0) {
             return Technique.AQUARELLE;
         }
@@ -125,7 +122,6 @@ public class Main {
     // returning random material
     public static Material rand_mat() {
         int temp = (int)(Math.random() * (3) + 0);
-        // System.out.println("Random mat: " + temp);
         if (temp == 0) {
             return Material.IRON;
         }
